@@ -1,9 +1,12 @@
 import express from "express";
-import { addSessionCart, generateSession } from "../controllers/sessionController.js";
+import { addCart, deleteCart, generateSession, getCart, updateCart } from "../controllers/sessionController.js";
 
 const sessionRoutes=express.Router()
 
 sessionRoutes.get("/generate-session",generateSession)
-sessionRoutes.post("/session-cart",addSessionCart)
+sessionRoutes.post("/cart",addCart)
+sessionRoutes.get("/cart",getCart)
+sessionRoutes.delete("/cart/:id",deleteCart)
+sessionRoutes.patch("/cart/:id",updateCart)
 
 export default sessionRoutes;

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Utility classes */
+.btn-primary {
+  @apply px-6 py-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105;
+}
+
+.btn-secondary {
+  @apply px-6 py-2 bg-white text-primary-600 border-2 border-primary-600 font-medium rounded-lg hover:bg-primary-50 transition-all duration-300;
+}
+
+.btn-icon {
+  @apply p-2 hover:bg-slate-100 rounded-full transition-colors duration-200;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300;
+}
+
+.section-title {
+  @apply text-4xl font-bold text-slate-900 text-center mb-12;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
+}
